@@ -1,7 +1,7 @@
 import { useState, useCallback, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-// import './App.css';
+import { Global, css } from '@emotion/react';
 
 // Components
 import Header from './layout/Header';
@@ -54,6 +54,25 @@ const App = () => {
 
     return (
         <Router>
+            <Global
+                styles={css`
+                    @font-face {
+                        font-family: 'gtWalsheimProRegular';
+                        font-weight: 400;
+                        src: url('./assets/fonts/GTWalsheimProRegular.ttf')
+                            format('truetype');
+                    }
+                    html,
+                    body {
+                        margin: 0;
+                        max-width: 100vw;
+                        min-height: 100vh;
+                        overflow-x: hidden;
+                        padding: 0;
+                        scroll-behavior: smooth;
+                    }
+                `}
+            />
             {isBreakpoint ? (
                 <MobileHeader links={links} />
             ) : (
