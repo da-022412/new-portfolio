@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "stylelint-config-standard"
+  ],
+  "rules": {
+        "indentation": 4,
+        "number-leading-zero": null,
+        "no-missing-end-of-source-newline": null
+    },
+  "customSyntax": "@stylelint/postcss-css-in-js",
+  "string-quotes": "single"
+}
