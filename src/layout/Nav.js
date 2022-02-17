@@ -18,7 +18,7 @@ const MenuItem = styled.li`
 
     & a {
         color: inherit;
-        font-family: 'gtWalsheimProRegular';
+        font-family: gtWalsheimProRegular, sans-serif;
         font-size: 1rem;
         text-decoration: none;
     }

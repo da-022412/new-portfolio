@@ -5,8 +5,9 @@
   "rules": {
         "indentation": 4,
         "number-leading-zero": null,
-        "no-missing-end-of-source-newline": null
+        "no-missing-end-of-source-newline": null,
+        "string-quotes": "single",
+        "no-empty-first-line": null
     },
-  "customSyntax": "@stylelint/postcss-css-in-js",
-  "string-quotes": "single"
+  "customSyntax": "@stylelint/postcss-css-in-js"
 }

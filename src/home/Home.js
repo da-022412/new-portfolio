@@ -1,5 +1,7 @@
 import styled from '@emotion/styled';
 
+const font = 'gtWalsheimProRegular, sans-serif';
+
 const HeadingSection = styled.section`
     box-sizing: border-box;
     margin: auto;
@@ -12,12 +14,12 @@ const HeadingContainer = styled.div`
 `;
 
 const Heading = styled.h1`
-    font-family: 'gtWalsheimProRegular';
+    font-family: ${font};
     font-size: 3.75rem;
 `;
 
 const SubHeading = styled.p`
-    font-family: 'gtWalsheimProRegular';
+    font-family: ${font};
     font-size: 1.25rem;
     width: 50%;
 `;
