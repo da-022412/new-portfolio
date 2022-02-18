@@ -1,7 +1,13 @@
 import Hero from './Hero';
+import Portfolio from './Portfolio';
 
 const Home = () => {
-    return <Hero />;
+    return (
+        <>
+            <Hero />
+            <Portfolio />
+        </>
+    );
 };
 
 export default Home;
