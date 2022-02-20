@@ -1,5 +1,5 @@
-import Hero from './Hero';
-import Portfolio from './Portfolio';
+import Hero from '../../components/Hero';
+import Portfolio from '../../components/Portfolio';
 
 const Home = () => {
     return (

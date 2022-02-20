@@ -4,11 +4,11 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Global, css } from '@emotion/react';
 
 // Components
-import Header from './layout/Header';
-import MobileHeader from './layout/MobileHeader';
-import Footer from './layout/Footer';
+import Header from './components/Header';
+import MobileHeader from './components/MobileHeader';
+import Footer from './components/Footer';
 
-import Home from './home/Home';
+import Home from './views/Home';
 
 const useMediaQuery = (width) => {
     const [targetReached, setTargetReached] = useState(false);
@@ -44,6 +44,7 @@ const GlobalStyles = css`
         font-weight: 400;
         src: url('./assets/fonts/GTWalsheimProRegular.ttf') format('truetype');
     }
+
     html,
     body {
         margin: 0;
@@ -53,6 +54,7 @@ const GlobalStyles = css`
         padding: 0;
         scroll-behavior: smooth;
     }
+
     :root {
         --body-text: ${toRem(20)};
         --color-accent: #686868;

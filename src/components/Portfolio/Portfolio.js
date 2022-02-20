@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
 
-import dailyPay from '../assets/images/dailypay-mockup.jpg';
-import VCS from '../assets/images/vascular-care-specialists-mockup.jpg';
-import Paceline from '../assets/images/paceline-mockup.jpg';
-import aboveTheRest from '../assets/images/above-the-rest-mockup.jpg';
+import dailyPay from '../../assets/images/dailypay-mockup.jpg';
+import VCS from '../../assets/images/vascular-care-specialists-mockup.jpg';
+import Paceline from '../../assets/images/paceline-mockup.jpg';
+import aboveTheRest from '../../assets/images/above-the-rest-mockup.jpg';
 
 const font = 'gtWalsheimProRegular, sans-serif';
 

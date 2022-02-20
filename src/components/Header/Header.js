@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import Nav from './Nav';
+import Nav from '../Nav';
 
 const HeaderContainer = styled.div`
     align-items: center;
