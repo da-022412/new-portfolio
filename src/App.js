@@ -51,6 +51,17 @@ const GlobalStyles = css`
         padding: 0;
         scroll-behavior: smooth;
     }
+    :root {
+        --body-text: 1.25rem;
+        --color-accent: #686868;
+        --color-text: #000;
+        --font: gtWalsheimProRegular, sans-serif;
+        --heading-1: 3.75rem;
+        --heading-2: 3rem;
+        --heading-3: 2.25rem;
+        --heading-4: 1.75rem;
+        --site-width: 1200px;
+    }
 `;
 
 const links = [
