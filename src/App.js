@@ -57,11 +57,11 @@ const GlobalStyles = css`
         --body-text: ${toRem(20)};
         --color-accent: #686868;
         --color-text: #000;
-        --font: gtWalsheimProRegular, sans-serif;
         --heading-1: ${toRem(60)};
         --heading-2: ${toRem(48)};
         --heading-3: ${toRem(36)};
         --heading-4: ${toRem(28)};
+        --primary-font: gtWalsheimProRegular, sans-serif;
         --site-width: 1200px;
     }
 `;
