@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 const font = 'gtWalsheimProRegular, sans-serif';
 
-const ItemContainer = styled.main`
+const PortfolioItem = styled.main`
     align-items: center;
     display: flex;
     justify-content: space-between;
@@ -32,7 +32,7 @@ const Image = styled.figure`
 
 const PortfolioItem = ({ items }) => {
     return (
-        <ItemContainer>
+        <PortfolioItem>
             <Content>
                 <ItemHeading>{items.title}</ItemHeading>
                 <ItemContent>{items.copy}</ItemContent>
@@ -40,7 +40,7 @@ const PortfolioItem = ({ items }) => {
             <Image>
                 <img src={items.img} height='600' width='600' />
             </Image>
-        </ItemContainer>
+        </PortfolioItem>
     );
 };
 
