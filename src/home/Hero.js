@@ -15,7 +15,7 @@ const HeadingContainer = styled.div`
 
 const Heading = styled.h1`
     font-family: ${font};
-    font-size: 3.75rem;
+    font-size: var(--body-text);
 `;
 
 const SubHeading = styled.p`

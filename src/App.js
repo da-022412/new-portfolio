@@ -36,6 +36,8 @@ const useMediaQuery = (width) => {
     return targetReached;
 };
 
+const toRem = (size, base = 16) => size / base + 'rem';
+
 const GlobalStyles = css`
     @font-face {
         font-family: 'gtWalsheimProRegular';
@@ -52,14 +54,14 @@ const GlobalStyles = css`
         scroll-behavior: smooth;
     }
     :root {
-        --body-text: 1.25rem;
+        --body-text: ${toRem(20)};
         --color-accent: #686868;
         --color-text: #000;
         --font: gtWalsheimProRegular, sans-serif;
-        --heading-1: 3.75rem;
-        --heading-2: 3rem;
-        --heading-3: 2.25rem;
-        --heading-4: 1.75rem;
+        --heading-1: ${toRem(60)};
+        --heading-2: ${toRem(48)};
+        --heading-3: ${toRem(36)};
+        --heading-4: ${toRem(28)};
         --site-width: 1200px;
     }
 `;
