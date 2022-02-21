@@ -59,8 +59,6 @@ const Portfolio = () => {
     );
 };
 
-const font = 'gtWalsheimProRegular, sans-serif';
-
 const HeadingContainer = styled.div`
     margin-bottom: 3rem;
 `;

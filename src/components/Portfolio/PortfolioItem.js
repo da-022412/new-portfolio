@@ -1,6 +1,18 @@
 import styled from 'styled-components';
 
-const font = 'gtWalsheimProRegular, sans-serif';
+const PortfolioItem = ({ items }) => {
+    return (
+        <PortfolioItem>
+            <Content>
+                <ItemHeading>{items.title}</ItemHeading>
+                <ItemContent>{items.copy}</ItemContent>
+            </Content>
+            <Image>
+                <img src={items.img} height='600' width='600' />
+            </Image>
+        </PortfolioItem>
+    );
+};
 
 const PortfolioItem = styled.main`
     align-items: center;
@@ -29,19 +41,5 @@ const Image = styled.figure`
         max-width: 100%;
     }
 `;
-
-const PortfolioItem = ({ items }) => {
-    return (
-        <PortfolioItem>
-            <Content>
-                <ItemHeading>{items.title}</ItemHeading>
-                <ItemContent>{items.copy}</ItemContent>
-            </Content>
-            <Image>
-                <img src={items.img} height='600' width='600' />
-            </Image>
-        </PortfolioItem>
-    );
-};
 
 export default PortfolioItem;

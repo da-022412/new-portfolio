@@ -1,40 +1,10 @@
-import { useState, useCallback, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
 import { createGlobalStyle } from 'styled-components';
 
-// Components
-import Header from './components/Header';
-import MobileHeader from './components/MobileHeader';
-import Footer from './components/Footer';
+import Layout from './components/Layout';
 
+// Views
 import Home from './views/Home';
-
-const useMediaQuery = (width) => {
-    const [targetReached, setTargetReached] = useState(false);
-
-    const updateTarget = useCallback((e) => {
-        if (e.matches) {
-            setTargetReached(true);
-        } else {
-            setTargetReached(false);
-        }
-    }, []);
-
-    useEffect(() => {
-        const media = window.matchMedia(`(max-width: ${width}px)`);
-        media.addEventListener('change', updateTarget);
-
-        // Check on mount (callback is not called until a change occurs)
-        if (media.matches) {
-            setTargetReached(true);
-        }
-
-        return () => media.removeEventListener('change', updateTarget);
-    }, []);
-
-    return targetReached;
-};
 
 const toRem = (size, base = 16) => size / base + 'rem';
 
@@ -68,34 +38,15 @@ const GlobalStyles = createGlobalStyle`
     }
 `;
 
-const links = [
-    {
-        id: 0,
-        title: 'My work',
-        slug: '#work',
-    },
-    {
-        id: 1,
-        title: 'Get in touch',
-        slug: '#contact',
-    },
-];
-
 const App = () => {
-    const isBreakpoint = useMediaQuery(980);
-
     return (
         <Router>
-            <GlobalStyles />
-            {isBreakpoint ? (
-                <MobileHeader links={links} />
-            ) : (
-                <Header links={links} />
-            )}
-            <Routes>
-                <Route path='/' element={<Home />} />
-            </Routes>
-            <Footer />
+            <Layout>
+                <GlobalStyles />
+                <Routes>
+                    <Route path='/' element={<Home />} />
+                </Routes>
+            </Layout>
         </Router>
     );
 };
