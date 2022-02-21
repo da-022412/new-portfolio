@@ -13,12 +13,12 @@ const Content = styled.div`
 `;
 
 const ItemHeading = styled.h3`
-    font-family: ${font};
+    font-family: var(--primary-font);
     font-size: 1.75rem;
 `;
 
 const ItemContent = styled.p`
-    font-family: ${font};
+    font-family: var(--primary-font);
     font-size: 1.75rem;
 `;
 

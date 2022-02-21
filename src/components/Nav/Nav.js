@@ -32,8 +32,8 @@ const MenuItem = styled.li`
 
     & a {
         color: inherit;
-        font-family: gtWalsheimProRegular, sans-serif;
-        font-size: 1rem;
+        font-family: var(--primary-font);
+        font-size: var(--body-text);
         text-decoration: none;
     }
 `;

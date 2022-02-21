@@ -1,5 +1,7 @@
 import styled from '@emotion/styled';
 
+import Container from '../Container';
+
 import dailyPay from '../../assets/images/dailypay-mockup.jpg';
 import VCS from '../../assets/images/vascular-care-specialists-mockup.jpg';
 import Paceline from '../../assets/images/paceline-mockup.jpg';
@@ -38,7 +40,7 @@ const portfolioItems = [
 
 const Portfolio = () => {
     return (
-        <PortfolioSection id='work'>
+        <Container padding={160} id='work'>
             <HeadingContainer>
                 <Heading>My Work</Heading>
             </HeadingContainer>
@@ -53,26 +55,18 @@ const Portfolio = () => {
                     </Image>
                 </PortfolioItem>
             ))}
-        </PortfolioSection>
+        </Container>
     );
 };
 
 const font = 'gtWalsheimProRegular, sans-serif';
-
-const PortfolioSection = styled.main`
-    box-sizing: border-box;
-    margin: auto;
-    max-width: 90%;
-    padding: 10rem 0;
-    width: 1200px;
-`;
 
 const HeadingContainer = styled.div`
     margin-bottom: 3rem;
 `;
 
 const Heading = styled.h2`
-    font-family: gtWalsheimProRegular, sans-serif;
+    font-family: var(--primary-font);
     font-size: 3rem;
     text-align: center;
 `;
@@ -88,13 +82,13 @@ const Content = styled.div`
 `;
 
 const ItemHeading = styled.h3`
-    font-family: ${font};
+    font-family: var(--primary-font);
     font-size: 1.75rem;
 `;
 
 const ItemContent = styled.p`
     color: #686868;
-    font-family: ${font};
+    font-family: var(--primary-font);
     font-size: 1rem;
 `;
 

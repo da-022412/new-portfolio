@@ -1,8 +1,10 @@
 import styled from '@emotion/styled';
 
+import Container from '../Container';
+
 const Home = () => {
     return (
-        <HeadingSection>
+        <Container>
             <HeadingContainer>
                 <Heading>I'm Dennis, Front-End Developer</Heading>
                 <SubHeading>
@@ -12,16 +14,9 @@ const Home = () => {
                 </SubHeading>
             </HeadingContainer>
             <Divider></Divider>
-        </HeadingSection>
+        </Container>
     );
 };
-
-const HeadingSection = styled.section`
-    box-sizing: border-box;
-    margin: auto;
-    max-width: 90%;
-    width: 1200px;
-`;
 
 const HeadingContainer = styled.div`
     padding: 5rem 0 8.75rem;
