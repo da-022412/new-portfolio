@@ -1,5 +1,19 @@
 import styled from '@emotion/styled';
 
+const Nav = ({ links }) => {
+    return (
+        <nav>
+            <NavContainer>
+                {links.map((x) => (
+                    <MenuItem key={x.id}>
+                        <a href={x.slug}>{x.title}</a>
+                    </MenuItem>
+                ))}
+            </NavContainer>
+        </nav>
+    );
+};
+
 const NavContainer = styled.ul`
     align-items: center;
     display: flex;
@@ -23,19 +37,5 @@ const MenuItem = styled.li`
         text-decoration: none;
     }
 `;
-
-const Nav = ({ links }) => {
-    return (
-        <nav>
-            <NavContainer>
-                {links.map((x) => (
-                    <MenuItem key={x.id}>
-                        <a href={x.slug}>{x.title}</a>
-                    </MenuItem>
-                ))}
-            </NavContainer>
-        </nav>
-    );
-};
 
 export default Nav;

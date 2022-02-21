@@ -2,6 +2,17 @@ import styled from '@emotion/styled';
 
 import Nav from '../Nav';
 
+const Header = ({ links }) => {
+    return (
+        <header>
+            <HeaderContainer>
+                <Logo>Dennis Acosta</Logo>
+                <Nav links={links} />
+            </HeaderContainer>
+        </header>
+    );
+};
+
 const HeaderContainer = styled.div`
     align-items: center;
     box-sizing: border-box;
@@ -18,16 +29,5 @@ const Logo = styled.div`
     font-family: gtWalsheimProRegular, sans-serif;
     font-size: 1.5rem;
 `;
-
-const Header = ({ links }) => {
-    return (
-        <header>
-            <HeaderContainer>
-                <Logo>Dennis Acosta</Logo>
-                <Nav links={links} />
-            </HeaderContainer>
-        </header>
-    );
-};
 
 export default Header;

@@ -5,51 +5,6 @@ import VCS from '../../assets/images/vascular-care-specialists-mockup.jpg';
 import Paceline from '../../assets/images/paceline-mockup.jpg';
 import aboveTheRest from '../../assets/images/above-the-rest-mockup.jpg';
 
-const font = 'gtWalsheimProRegular, sans-serif';
-
-const PortfolioSection = styled.main`
-    box-sizing: border-box;
-    margin: auto;
-    max-width: 90%;
-    padding: 10rem 0;
-    width: 1200px;
-`;
-
-const HeadingContainer = styled.div`
-    margin-bottom: 3rem;
-`;
-
-const Heading = styled.h2`
-    font-family: gtWalsheimProRegular, sans-serif;
-    font-size: 3rem;
-    text-align: center;
-`;
-
-const PortfolioItem = styled.main`
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-`;
-
-const Content = styled.div`
-    padding: 2.5rem;
-`;
-
-const ItemHeading = styled.h3`
-    font-family: ${font};
-    font-size: 1.75rem;
-`;
-
-const ItemContent = styled.p`
-    color: #686868;
-    font-family: ${font};
-    font-size: 1rem;
-`;
-
-const Image = styled.figure`
-    display: flex;
-`;
-
 const portfolioItems = [
     {
         id: 0,
@@ -101,5 +56,50 @@ const Portfolio = () => {
         </PortfolioSection>
     );
 };
+
+const font = 'gtWalsheimProRegular, sans-serif';
+
+const PortfolioSection = styled.main`
+    box-sizing: border-box;
+    margin: auto;
+    max-width: 90%;
+    padding: 10rem 0;
+    width: 1200px;
+`;
+
+const HeadingContainer = styled.div`
+    margin-bottom: 3rem;
+`;
+
+const Heading = styled.h2`
+    font-family: gtWalsheimProRegular, sans-serif;
+    font-size: 3rem;
+    text-align: center;
+`;
+
+const PortfolioItem = styled.main`
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+`;
+
+const Content = styled.div`
+    padding: 2.5rem;
+`;
+
+const ItemHeading = styled.h3`
+    font-family: ${font};
+    font-size: 1.75rem;
+`;
+
+const ItemContent = styled.p`
+    color: #686868;
+    font-family: ${font};
+    font-size: 1rem;
+`;
+
+const Image = styled.figure`
+    display: flex;
+`;
 
 export default Portfolio;
