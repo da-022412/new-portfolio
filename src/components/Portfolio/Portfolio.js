@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 import Container from '../Container';
 
@@ -40,7 +40,7 @@ const portfolioItems = [
 
 const Portfolio = () => {
     return (
-        <Container padding={160} id='work'>
+        <Container padding={160}>
             <HeadingContainer>
                 <Heading>My Work</Heading>
             </HeadingContainer>

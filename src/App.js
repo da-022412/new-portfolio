@@ -1,7 +1,7 @@
 import { useState, useCallback, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-import { Global, css } from '@emotion/react';
+import { createGlobalStyle } from 'styled-components';
 
 // Components
 import Header from './components/Header';
@@ -38,7 +38,7 @@ const useMediaQuery = (width) => {
 
 const toRem = (size, base = 16) => size / base + 'rem';
 
-const GlobalStyles = css`
+const GlobalStyles = createGlobalStyle`
     @font-face {
         font-family: 'gtWalsheimProRegular';
         font-weight: 400;
@@ -86,7 +86,7 @@ const App = () => {
 
     return (
         <Router>
-            <Global styles={GlobalStyles} />
+            <GlobalStyles />
             {isBreakpoint ? (
                 <MobileHeader links={links} />
             ) : (

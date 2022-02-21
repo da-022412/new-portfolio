@@ -1,12 +1,13 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 import Container from '../Container';
+import Heading from '../Heading';
 
 const Home = () => {
     return (
         <Container>
             <HeadingContainer>
-                <Heading>I'm Dennis, Front-End Developer</Heading>
+                <Heading level={1}>I'm Dennis, Front-End Developer</Heading>
                 <SubHeading>
                     Lorem ipsum dolor sit amet consectetur adipiscing elit sed
                     do eiusmod tempor incididunt ut labore et dolore magna
@@ -20,11 +21,6 @@ const Home = () => {
 
 const HeadingContainer = styled.div`
     padding: 5rem 0 8.75rem;
-`;
-
-const Heading = styled.h1`
-    font-family: var(--primary-font);
-    font-size: var(--heading-1);
 `;
 
 const SubHeading = styled.p`
