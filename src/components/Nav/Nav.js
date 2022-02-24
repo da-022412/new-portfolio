@@ -17,15 +17,12 @@ const Nav = ({ links }) => {
 const NavContainer = styled.ul`
     align-items: center;
     display: flex;
+    gap: 2.5rem;
     justify-content: space-between;
     list-style-type: none;
-    margin: auto;
-    padding: 5rem 0;
 `;
 
 const MenuItem = styled.li`
-    margin-left: 5rem;
-
     &:first-of-type {
         margin: 0;
     }
