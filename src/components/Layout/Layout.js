@@ -1,8 +1,8 @@
 import { useState, useCallback, useEffect } from 'react';
 
-import Header from '../Header';
-import MobileHeader from '../MobileHeader';
-import Footer from '../Footer';
+import Header from './Header';
+import MobileHeader from './MobileHeader';
+import Footer from './Footer';
 
 const useMediaQuery = (width) => {
     const [targetReached, setTargetReached] = useState(false);
