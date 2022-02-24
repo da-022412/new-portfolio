@@ -2,27 +2,18 @@ import styled from 'styled-components';
 
 import Nav from '../Nav';
 
+import FlexContainer from '../FlexContainer';
+
 const Header = ({ links }) => {
     return (
         <header>
-            <HeaderContainer>
+            <FlexContainer padding={80}>
                 <Logo>Dennis Acosta</Logo>
                 <Nav links={links} />
-            </HeaderContainer>
+            </FlexContainer>
         </header>
     );
 };
-
-const HeaderContainer = styled.div`
-    align-items: center;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    margin: auto;
-    max-width: 90%;
-    padding: 5rem 0;
-    width: 1200px;
-`;
 
 const Logo = styled.div`
     color: #000;

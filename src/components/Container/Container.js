@@ -2,8 +2,12 @@ import styled from 'styled-components';
 
 const toRem = (size, base = 16) => size / base + 'rem';
 
-const Container = ({ padding, children }) => {
-    return <Wrapper padding={padding}>{children}</Wrapper>;
+const Container = ({ padding, className, children }) => {
+    return (
+        <Wrapper padding={padding} className={className}>
+            {children}
+        </Wrapper>
+    );
 };
 
 const Wrapper = styled.section`
