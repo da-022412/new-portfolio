@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import Container from '../Container';
+import Heading from '../Heading';
 import BodyText from '../BodyText';
 
 const Home = () => {
@@ -15,11 +16,6 @@ const Home = () => {
         </Container>
     );
 };
-
-const Heading = styled.h1`
-    font-family: var(--primary-font);
-    font-size: var(--heading-1);
-`;
 
 const SubHeading = styled(BodyText)`
     width: 50%;

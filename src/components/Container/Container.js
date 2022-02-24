@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 const toRem = (size, base = 16) => size / base + 'rem';
 
-const Container = ({ padding, className, children }) => {
+const Container = ({ padding, children, ...rest }) => {
     return (
-        <Wrapper padding={padding} className={className}>
+        <Wrapper padding={padding} {...rest}>
             {children}
         </Wrapper>
     );

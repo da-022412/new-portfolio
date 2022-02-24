@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-const BodyText = ({ className, children }) => {
+const BodyText = ({ children, ...rest }) => {
     return (
         <Wrapper
-            className={className}
+            {...rest}
             dangerouslySetInnerHTML={{ __html: children }}
         ></Wrapper>
     );
