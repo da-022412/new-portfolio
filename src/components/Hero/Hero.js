@@ -1,41 +1,28 @@
 import styled from 'styled-components';
 
 import Container from '../Container';
+import BodyText from '../BodyText';
 
 const Home = () => {
     return (
-        <Container>
-            <HeadingContainer>
-                <Heading>I'm Dennis, Front-End Developer</Heading>
-                <SubHeading>
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Enim ad minim veniam quis nostrud
-                </SubHeading>
-            </HeadingContainer>
-            <Divider></Divider>
+        <Container padding={48}>
+            <Heading>I'm Dennis, Front-End Developer</Heading>
+            <SubHeading>
+                Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim
+                ad minim veniam quis nostrud
+            </SubHeading>
         </Container>
     );
 };
-
-const HeadingContainer = styled.div`
-    padding: 5rem 0 8.75rem;
-`;
 
 const Heading = styled.h1`
     font-family: var(--primary-font);
     font-size: var(--heading-1);
 `;
 
-const SubHeading = styled.p`
-    font-family: var(--primary-font);
-    font-size: var(--body-text);
+const SubHeading = styled(BodyText)`
     width: 50%;
-`;
-
-const Divider = styled.div`
-    background-color: #f7f7f7;
-    height: 2px;
 `;
 
 export default Home;
