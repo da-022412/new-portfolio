@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const toRem = (size, base = 16) => size / base + 'rem';
+import { toRem } from '../../utils.js';
 
 const Container = ({ padding, children, ...rest }) => {
     return (
