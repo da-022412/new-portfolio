@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 const StyledHeading = styled.h1`
+    color: var(--color-text);
     font-family: var(--primary-font);
     font-size: var(--heading-1);
-    color: #000;
 `;
 
 const Heading = ({ level, ...rest }) => {

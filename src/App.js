@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
 
+import { toRem } from './utils.js';
+
 import Layout from './components/Layout';
 
 // Views
 import Home from './views/Home';
-
-const toRem = (size, base = 16) => size / base + 'rem';
 
 const GlobalStyles = createGlobalStyle`
     @font-face {
