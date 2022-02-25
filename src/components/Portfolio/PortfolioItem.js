@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { toRem } from '../../utils.js';
+
 import FlexContainer from '../FlexContainer';
 import Heading from '../Heading';
 import BodyText from '../BodyText';
@@ -10,7 +12,7 @@ const PortfolioItem = ({ title, copy, img, link }) => {
         <Wrapper padding={40}>
             <div>
                 <StyledHeading level={3}>{title}</StyledHeading>
-                <BodyText>{copy}</BodyText>
+                <StyledText>{copy}</StyledText>
                 <LinkText link={link}>View Project</LinkText>
             </div>
             <figure>
@@ -26,6 +28,10 @@ const Wrapper = styled(FlexContainer)`
 
 const StyledHeading = styled(Heading)`
     font-size: var(--heading-3);
+`;
+
+const StyledText = styled(BodyText)`
+    margin-bottom: ${toRem(48)};
 `;
 
 export default PortfolioItem;
