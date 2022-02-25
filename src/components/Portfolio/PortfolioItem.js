@@ -31,7 +31,7 @@ const StyledHeading = styled(Heading)`
 `;
 
 const StyledText = styled(BodyText)`
-    margin-bottom: ${toRem(48)};
+    padding-bottom: ${toRem(48)};
 `;
 
 export default PortfolioItem;
