@@ -30,29 +30,12 @@ const useMediaQuery = (width) => {
     return targetReached;
 };
 
-const links = [
-    {
-        id: 0,
-        title: 'My work',
-        slug: '#work',
-    },
-    {
-        id: 1,
-        title: 'Get in touch',
-        slug: '#contact',
-    },
-];
-
 const Layout = ({ children }) => {
     const isBreakpoint = useMediaQuery(980);
 
     return (
         <>
-            {isBreakpoint ? (
-                <MobileHeader links={links} />
-            ) : (
-                <Header links={links} />
-            )}
+            {isBreakpoint ? <MobileHeader /> : <Header />}
             <>{children}</>
             <Footer />
         </>

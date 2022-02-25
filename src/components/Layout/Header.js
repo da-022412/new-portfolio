@@ -4,12 +4,12 @@ import Nav from '../Nav';
 
 import FlexContainer from '../FlexContainer';
 
-const Header = ({ links }) => {
+const Header = () => {
     return (
         <header>
             <FlexContainer padding={80}>
                 <Logo>Dennis Acosta</Logo>
-                <Nav links={links} />
+                <Nav />
             </FlexContainer>
         </header>
     );

@@ -14,25 +14,25 @@ const CONTENT = [
         title: 'DailyPay',
         copy: 'Earned wage access and on demand pay solutions.',
         img: dailyPay,
-        src: '/project/dailypay',
+        link: '/project/dailypay',
     },
     {
         title: 'Vascular Care Specialists',
         copy: 'Providing care for traditional vascular surgery and minimally invasive endovascular surgical procedures',
         img: VCS,
-        src: '/project/vascular-care-specialists',
+        link: '/project/vascular-care-specialists',
     },
     {
         title: 'Paceline',
         copy: 'The first-ever fitness rewards platform that adds financial benefit to your physical activity.',
         img: Paceline,
-        src: '/project/paceline',
+        link: '/project/paceline',
     },
     {
         title: 'Above the Rest',
         copy: 'A complete and licensed roofing contractor providing roof installation, repair, and replacement as well as vinyl siding.',
         img: aboveTheRest,
-        src: '/project/above-the-rest',
+        link: '/project/above-the-rest',
     },
 ];
 
