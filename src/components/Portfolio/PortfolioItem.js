@@ -1,45 +1,29 @@
 import styled from 'styled-components';
 
-const PortfolioItem = ({ items }) => {
+import FlexContainer from '../FlexContainer';
+import Heading from '../Heading';
+import BodyText from '../BodyText';
+
+const PortfolioItem = ({ title, copy, img }) => {
     return (
-        <PortfolioItem>
-            <Content>
-                <ItemHeading>{items.title}</ItemHeading>
-                <ItemContent>{items.copy}</ItemContent>
-            </Content>
-            <Image>
-                <img src={items.img} height='600' width='600' />
-            </Image>
-        </PortfolioItem>
+        <Wrapper padding={40}>
+            <div>
+                <StyledHeading level={3}>{title}</StyledHeading>
+                <BodyText>{copy}</BodyText>
+            </div>
+            <figure>
+                <img src={img} height='600' width='600' />
+            </figure>
+        </Wrapper>
     );
 };
 
-const PortfolioItem = styled.main`
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
+const Wrapper = styled(FlexContainer)`
+    max-width: none;
 `;
 
-const Content = styled.div`
-    padding: 2.5rem;
-`;
-
-const ItemHeading = styled.h3`
-    font-family: var(--primary-font);
-    font-size: 1.75rem;
-`;
-
-const ItemContent = styled.p`
-    font-family: var(--primary-font);
-    font-size: 1.75rem;
-`;
-
-const Image = styled.figure`
-    display: flex;
-
-    & img {
-        max-width: 100%;
-    }
+const StyledHeading = styled(Heading)`
+    font-size: var(--heading-3);
 `;
 
 export default PortfolioItem;

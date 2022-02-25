@@ -1,36 +1,34 @@
 import styled from 'styled-components';
 
 import Container from '../Container';
+import Heading from '../Heading';
+import PortfolioItems from './PortfolioItems';
 
 import dailyPay from '../../assets/images/dailypay-mockup.jpg';
 import VCS from '../../assets/images/vascular-care-specialists-mockup.jpg';
 import Paceline from '../../assets/images/paceline-mockup.jpg';
 import aboveTheRest from '../../assets/images/above-the-rest-mockup.jpg';
 
-const portfolioItems = [
+const CONTENT = [
     {
-        id: 0,
         title: 'DailyPay',
         copy: 'Earned wage access and on demand pay solutions.',
         img: dailyPay,
         src: '/project/dailypay',
     },
     {
-        id: 1,
         title: 'Vascular Care Specialists',
         copy: 'Providing care for traditional vascular surgery and minimally invasive endovascular surgical procedures',
         img: VCS,
         src: '/project/vascular-care-specialists',
     },
     {
-        id: 2,
         title: 'Paceline',
         copy: 'The first-ever fitness rewards platform that adds financial benefit to your physical activity.',
         img: Paceline,
         src: '/project/paceline',
     },
     {
-        id: 3,
         title: 'Above the Rest',
         copy: 'A complete and licensed roofing contractor providing roof installation, repair, and replacement as well as vinyl siding.',
         img: aboveTheRest,
@@ -40,58 +38,16 @@ const portfolioItems = [
 
 const Portfolio = () => {
     return (
-        <Container padding={160}>
-            <HeadingContainer>
-                <Heading>My Work</Heading>
-            </HeadingContainer>
-            {portfolioItems.map((item) => (
-                <PortfolioItem key={item.id}>
-                    <Content>
-                        <ItemHeading>{item.title}</ItemHeading>
-                        <ItemContent>{item.copy}</ItemContent>
-                    </Content>
-                    <Image>
-                        <img src={item.img} height='600' width='600' />
-                    </Image>
-                </PortfolioItem>
-            ))}
+        <Container padding={120}>
+            <StyledHeading level={2}>My Work</StyledHeading>
+            <PortfolioItems items={CONTENT} />
         </Container>
     );
 };
 
-const HeadingContainer = styled.div`
-    margin-bottom: 3rem;
-`;
-
-const Heading = styled.h2`
-    font-family: var(--primary-font);
-    font-size: 3rem;
+const StyledHeading = styled(Heading)`
+    font-size: var(--heading-2);
     text-align: center;
-`;
-
-const PortfolioItem = styled.main`
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-`;
-
-const Content = styled.div`
-    padding: 2.5rem;
-`;
-
-const ItemHeading = styled.h3`
-    font-family: var(--primary-font);
-    font-size: 1.75rem;
-`;
-
-const ItemContent = styled.p`
-    color: #686868;
-    font-family: var(--primary-font);
-    font-size: 1rem;
-`;
-
-const Image = styled.figure`
-    display: flex;
 `;
 
 export default Portfolio;

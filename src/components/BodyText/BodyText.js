@@ -3,8 +3,8 @@ import styled from 'styled-components';
 const BodyText = ({ children, ...rest }) => {
     return (
         <Wrapper
-            {...rest}
             dangerouslySetInnerHTML={{ __html: children }}
+            {...rest}
         ></Wrapper>
     );
 };
