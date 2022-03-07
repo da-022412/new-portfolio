@@ -39,14 +39,14 @@ const CONTENT = [
 const Portfolio = () => {
     return (
         <Container padding={120}>
-            <StyledHeading level={2}>My Work</StyledHeading>
+            <StyledHeading level={3}>My Work</StyledHeading>
             <PortfolioItems items={CONTENT} />
         </Container>
     );
 };
 
 const StyledHeading = styled(Heading)`
-    font-size: var(--heading-2);
+    font-size: var(--heading-3);
     text-align: center;
 `;
 
