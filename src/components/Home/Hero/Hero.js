@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-import Container from '../Container';
-import Heading from '../Heading';
-import BodyText from '../BodyText';
+import Container from '../../Container';
+import Heading from '../../Heading';
+import BodyText from '../../BodyText';
 
 const Home = () => {
     return (

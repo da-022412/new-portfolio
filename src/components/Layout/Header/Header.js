@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import Nav from '../Nav';
 
-import FlexContainer from '../FlexContainer';
+import FlexContainer from '../../FlexContainer';
 
 const Header = () => {
     return (

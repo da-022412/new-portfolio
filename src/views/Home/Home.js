@@ -1,5 +1,5 @@
-import Hero from '../../components/Hero';
-import Portfolio from '../../components/Portfolio';
+import Hero from '../../components/Home/Hero';
+import Portfolio from '../../components/Home/Portfolio';
 import Divider from '../../components/Divider';
 
 const Home = () => {

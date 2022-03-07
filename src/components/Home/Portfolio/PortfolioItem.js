@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
-import { toRem } from '../../utils.js';
+import { toRem } from '../../../utils.js';
 
-import FlexContainer from '../FlexContainer';
-import Heading from '../Heading';
-import BodyText from '../BodyText';
-import LinkText from '../LinkText';
+import FlexContainer from '../../FlexContainer';
+import Heading from '../../Heading';
+import BodyText from '../../BodyText';
+import LinkText from '../../LinkText';
 
 const PortfolioItem = ({ title, copy, img, link }) => {
     return (

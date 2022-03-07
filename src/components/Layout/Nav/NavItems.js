@@ -1,4 +1,4 @@
-import LinkText from '../LinkText';
+import LinkText from '../../LinkText';
 
 const NavItems = ({ items }) => {
     return items.map(({ slug, text }, index) => (
