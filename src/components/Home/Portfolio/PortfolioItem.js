@@ -6,21 +6,30 @@ import FlexContainer from '../../FlexContainer';
 import Heading from '../../Heading';
 import BodyText from '../../BodyText';
 import LinkText from '../../LinkText';
+import Image from '../../Image';
 
 const PortfolioItem = ({ title, copy, img, link }) => {
     return (
         <Wrapper padding={40}>
-            <div>
+            <Column>
                 <StyledHeading level={3}>{title}</StyledHeading>
                 <StyledText>{copy}</StyledText>
                 <LinkText link={link}>View Project</LinkText>
-            </div>
-            <figure>
-                <img src={img} height='600' width='600' />
-            </figure>
+            </Column>
+            <Image
+                src={img.src}
+                height={img.height}
+                width={img.width}
+                alt={img.alt}
+            />
         </Wrapper>
     );
 };
+
+const Column = styled.div`
+    box-sizing: border-box;
+    width: 50%;
+`;
 
 const Wrapper = styled(FlexContainer)`
     max-width: none;
