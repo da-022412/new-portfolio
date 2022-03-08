@@ -14,7 +14,9 @@ const PortfolioItem = ({ title, copy, img, link }) => {
             <Column>
                 <StyledHeading level={3}>{title}</StyledHeading>
                 <StyledText>{copy}</StyledText>
-                <LinkText link={link}>View Project</LinkText>
+                <LinkText link={link} target='_blank'>
+                    View Project
+                </LinkText>
             </Column>
             <Image
                 src={img.src}
