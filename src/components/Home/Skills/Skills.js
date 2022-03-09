@@ -8,13 +8,13 @@ const CONTENT = [
         skill: 'ReactJS',
     },
     {
-        skill: 'JavaScript',
-    },
-    {
         skill: 'HTML',
     },
     {
         skill: 'CSS',
+    },
+    {
+        skill: 'JavaScript',
     },
     {
         skill: 'SASS',
@@ -29,7 +29,7 @@ const CONTENT = [
 
 const Skills = () => {
     return (
-        <StyledContainer padding={300}>
+        <StyledContainer padding={200}>
             <SkillSlider items={CONTENT} />
         </StyledContainer>
     );

@@ -36,6 +36,12 @@ const GlobalStyles = createGlobalStyle`
         --primary-font: gtWalsheimProRegular, sans-serif;
         --site-width: 1200px;
     }
+
+    .swiper-wrapper {
+        -webkit-transition-timing-function:linear!important; 
+        -o-transition-timing-function:linear!important;
+        transition-timing-function:linear!important; 
+    }
 `;
 
 const App = () => {
