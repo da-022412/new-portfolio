@@ -1,3 +1,5 @@
+import styled from 'styled-components';
+
 import FlexContainer from '../FlexContainer';
 
 import ContactInfo from './ContactInfo';
@@ -10,11 +12,15 @@ const CONTENT = {
 
 const Contact = () => {
     return (
-        <FlexContainer>
+        <StyledContainer padding={60}>
             <ContactInfo content={CONTENT} />
             <Form />
-        </FlexContainer>
+        </StyledContainer>
     );
 };
+
+const StyledContainer = styled(FlexContainer)`
+    align-items: flex-start;
+`;
 
 export default Contact;

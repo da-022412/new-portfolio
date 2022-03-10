@@ -3,6 +3,9 @@ import { createGlobalStyle } from 'styled-components';
 
 import { toRem } from './utils.js';
 
+// CSS reset
+import './reset.css';
+
 import Layout from './components/Layout';
 
 // Views
