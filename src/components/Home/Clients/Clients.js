@@ -67,8 +67,8 @@ const CONTENT = [
 
 const Clients = () => {
     return (
-        <Container padding={120}>
-            <StyledHeading level={2}>Selected Clients</StyledHeading>
+        <Container padding={100}>
+            <StyledHeading level={2}>Select Clients</StyledHeading>
             <ClientItems items={CONTENT} />
         </Container>
     );

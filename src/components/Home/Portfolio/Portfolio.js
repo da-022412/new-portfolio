@@ -58,7 +58,7 @@ const CONTENT = [
 
 const Portfolio = () => {
     return (
-        <Container padding={120}>
+        <Container padding={100}>
             <StyledHeading level={3}>My Work</StyledHeading>
             <PortfolioItems items={CONTENT} />
         </Container>

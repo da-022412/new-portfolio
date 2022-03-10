@@ -1,13 +1,20 @@
 import styled from 'styled-components';
 
+import Heading from '../Heading';
+import BodyText from '../BodyText';
+
 const ContactInfo = ({ content }) => {
     return (
         <Wrapper>
-            <Heading level='2'>{content.heading}</Heading>
+            <StyledHeading level='2'>{content.heading}</StyledHeading>
             <BodyText>{content.copy}</BodyText>
         </Wrapper>
     );
 };
+
+const StyledHeading = styled(Heading)`
+    font-size: var(--heading-2);
+`;
 
 const Wrapper = styled.div`
     box-sizing: border-box;
