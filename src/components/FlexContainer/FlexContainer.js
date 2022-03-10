@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { toRem } from '../../utils.js';
+
 import Container from '../Container';
 
 const FlexContainer = ({ padding, children, ...rest }) => {
@@ -13,7 +15,7 @@ const FlexContainer = ({ padding, children, ...rest }) => {
 const Wrapper = styled(Container)`
     align-items: center;
     display: flex;
-    gap: 1rem;
+    gap: ${toRem(80)};
     justify-content: space-between;
 `;
 

@@ -9,7 +9,7 @@ const Grid = ({ children, ...rest }) => {
 const Wrapper = styled.div`
     align-items: center;
     display: grid;
-    gap: ${toRem(60)} ${toRem(20)};
+    gap: ${toRem(80)};
     grid-template-columns: repeat(
         auto-fit,
         minmax(${(props) => props.width + 'px'}, 1fr)
