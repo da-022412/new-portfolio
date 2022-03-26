@@ -25,6 +25,9 @@ const CONTENT = [
     {
         skill: 'JSX',
     },
+    {
+        skill: 'Wordpress',
+    },
 ];
 
 const Skills = () => {

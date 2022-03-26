@@ -31,10 +31,19 @@ const PortfolioItem = ({ title, copy, img, link }) => {
 const Column = styled.div`
     box-sizing: border-box;
     width: 50%;
+
+    @media (max-width: 980px) {
+        width: 100%;
+    }
 `;
 
 const Wrapper = styled(FlexContainer)`
     max-width: none;
+
+    @media (max-width: 980px) {
+        flex-direction: column-reverse;
+        max-width: 90%;
+    }
 `;
 
 const StyledHeading = styled(Heading)`

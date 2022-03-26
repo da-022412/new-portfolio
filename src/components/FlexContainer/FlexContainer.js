@@ -17,6 +17,10 @@ const Wrapper = styled(Container)`
     display: flex;
     gap: ${toRem(80)};
     justify-content: space-between;
+
+    @media (max-width: 980px) {
+        flex-wrap: wrap;
+    }
 `;
 
 export default FlexContainer;

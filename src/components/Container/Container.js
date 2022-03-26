@@ -16,6 +16,11 @@ const Wrapper = styled.section`
     max-width: 90%;
     padding: ${(props) => (props.padding ? toRem(props.padding) + ' 0' : null)};
     width: var(--site-width);
+
+    @media (max-width: 980px) {
+        padding: ${(props) =>
+            props.padding ? toRem(props.padding / 2) + ' 0' : null};
+    }
 `;
 
 export default Container;
