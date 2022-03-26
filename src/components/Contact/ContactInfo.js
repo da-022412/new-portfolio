@@ -19,6 +19,10 @@ const StyledHeading = styled(Heading)`
 const Wrapper = styled.div`
     box-sizing: border-box;
     width: 50%;
+
+    @media (max-width: 980px) {
+        width: 100%;
+    }
 `;
 
 export default ContactInfo;

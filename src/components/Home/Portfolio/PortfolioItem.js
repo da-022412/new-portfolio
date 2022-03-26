@@ -7,24 +7,28 @@ import Heading from '../../Heading';
 import BodyText from '../../BodyText';
 import LinkText from '../../LinkText';
 import Image from '../../Image';
+import Divider from '../../Divider';
 
 const PortfolioItem = ({ title, copy, img, link }) => {
     return (
-        <Wrapper padding={40}>
-            <Column>
-                <StyledHeading level={3}>{title}</StyledHeading>
-                <StyledText>{copy}</StyledText>
-                <LinkText link={link} target='_blank'>
-                    View Project
-                </LinkText>
-            </Column>
-            <Image
-                src={img.src}
-                height={img.height}
-                width={img.width}
-                alt={img.alt}
-            />
-        </Wrapper>
+        <>
+            <Wrapper padding={40}>
+                <Column>
+                    <StyledHeading level={3}>{title}</StyledHeading>
+                    <StyledText>{copy}</StyledText>
+                    <LinkText link={link} target='_blank'>
+                        View Project
+                    </LinkText>
+                </Column>
+                <Image
+                    src={img.src}
+                    height={img.height}
+                    width={img.width}
+                    alt={img.alt}
+                />
+            </Wrapper>
+            <Divider />
+        </>
     );
 };
 
@@ -41,7 +45,7 @@ const Wrapper = styled(FlexContainer)`
     max-width: none;
 
     @media (max-width: 980px) {
-        flex-direction: column-reverse;
+        flex-direction: column;
         max-width: 90%;
     }
 `;

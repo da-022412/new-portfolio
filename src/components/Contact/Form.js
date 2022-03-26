@@ -88,6 +88,10 @@ const inputStyles = [
 
 const StyledForm = styled.form`
     width: 50%;
+
+    @media (max-width: 980px) {
+        width: 100%;
+    }
 `;
 
 const Input = styled.input(inputStyles);

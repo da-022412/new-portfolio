@@ -1,13 +1,7 @@
 import styled from 'styled-components';
 
-import Container from '../Container';
-
 const Divider = () => {
-    return (
-        <Container padding={48}>
-            <Seperator></Seperator>
-        </Container>
-    );
+    return <Seperator></Seperator>;
 };
 
 const Seperator = styled.div`

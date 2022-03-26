@@ -14,8 +14,6 @@ import 'swiper/css';
 const SkillSlider = ({ items }) => {
     return (
         <Swiper
-            spaceBetween={20}
-            slidesPerView={5}
             loop={true}
             autoplay={{
                 delay: 0,
@@ -25,6 +23,20 @@ const SkillSlider = ({ items }) => {
             freeModeMomentum={false}
             allowTouchMove={false}
             modules={[Autoplay]}
+            breakpoints={{
+                300: {
+                    slidesPerView: 3,
+                    spaceBetween: 10,
+                },
+                768: {
+                    slidesPerView: 5,
+                    spaceBetween: 20,
+                },
+                981: {
+                    slidesPerView: 4,
+                    spaceBetween: 20,
+                },
+            }}
         >
             {items.map(({ skill }, index) => (
                 <SwiperSlide key={index}>
@@ -46,6 +58,10 @@ const Wrapper = styled.div`
         content: '/';
         left: 100%;
         position: absolute;
+    }
+
+    @media (max-width: 980px) {
+        font-size: ${toRem(24)};
     }
 `;
 

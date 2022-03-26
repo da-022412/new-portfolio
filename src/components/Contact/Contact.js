@@ -7,7 +7,7 @@ import Form from './Form';
 
 const CONTENT = {
     heading: 'Get in Touch',
-    copy: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim ad minim veniam quis nostrud',
+    copy: 'Ready to take your online presence to the next level?',
 };
 
 const Contact = () => {

@@ -41,9 +41,18 @@ const GlobalStyles = createGlobalStyle`
     }
 
     .swiper-wrapper {
-        -webkit-transition-timing-function:linear!important; 
-        -o-transition-timing-function:linear!important;
-        transition-timing-function:linear!important; 
+        -webkit-transition-timing-function:linear !important; 
+        -o-transition-timing-function:linear !important;
+        transition-timing-function:linear !important; 
+    }
+
+    @media (max-width:767px) {
+        :root {
+            --heading-1: ${toRem(36)};
+            --heading-2: ${toRem(28)};
+            --heading-3: ${toRem(20)};
+            --heading-4: ${toRem(18)};
+        }
     }
 `;
 
