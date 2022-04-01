@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
 
 import { toRem } from './utils.js';
@@ -7,9 +7,7 @@ import { toRem } from './utils.js';
 import './reset.css';
 
 import Layout from './components/Layout';
-
-// Views
-import Home from './views/Home';
+import Views from './Views';
 
 const GlobalStyles = createGlobalStyle`
     :root {
@@ -39,9 +37,7 @@ const App = () => {
         <Router>
             <Layout>
                 <GlobalStyles />
-                <Routes>
-                    <Route path='/' element={<Home />} />
-                </Routes>
+                <Views />
             </Layout>
         </Router>
     );
