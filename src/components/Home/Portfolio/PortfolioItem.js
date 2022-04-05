@@ -6,26 +6,21 @@ import FlexContainer from '../../FlexContainer';
 import Heading from '../../Heading';
 import BodyText from '../../BodyText';
 import LinkText from '../../LinkText';
-import Image from '../../Image';
+import FeaturedImg from './FeaturedImg';
 import Divider from '../../Divider';
 
-const PortfolioItem = ({ title, copy, img, link }) => {
+const PortfolioItem = ({ title, excerpt, featuredImg, link }) => {
     return (
         <>
             <Wrapper padding={40}>
                 <Column>
                     <StyledHeading level={3}>{title}</StyledHeading>
-                    <StyledText>{copy}</StyledText>
+                    <StyledText>{excerpt}</StyledText>
                     <LinkText link={link} target='_blank'>
                         View Project
                     </LinkText>
                 </Column>
-                <Image
-                    src={img.src}
-                    height={img.height}
-                    width={img.width}
-                    alt={img.alt}
-                />
+                <FeaturedImg featuredImg={featuredImg} />
             </Wrapper>
             <Divider />
         </>

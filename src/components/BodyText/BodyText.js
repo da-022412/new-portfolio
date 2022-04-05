@@ -9,7 +9,7 @@ const BodyText = ({ children, ...rest }) => {
     );
 };
 
-const Wrapper = styled.p`
+const Wrapper = styled.div`
     color: var(--color-text);
     font-family: var(--primary-font);
     font-size: var(--body-text);
