@@ -106,19 +106,21 @@ const Button = styled.button`
     display: block;
     font-family: var(--primary-font);
     font-size: var(--body-text);
-    margin: ${toRem(20)} 0;
+    margin: ${toRem(40)} 0;
     padding: 0;
     position: relative;
     text-decoration: none;
 
     &:after {
         background-color: var(--color-text);
-        bottom: -4px;
+        bottom: -8px;
         content: '';
         display: block;
-        height: 2px;
+        height: 1px;
+        left: 50%;
         position: absolute;
         width: 0;
+        transform: translate(-50%, -50%);
         transition: all 0.3s ease;
     }
 
