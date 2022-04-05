@@ -102,7 +102,7 @@ const Textarea = styled.textarea(inputStyles);
 const Button = styled.button`
     background-color: transparent;
     border: none;
-    color: #fff;
+    color: var(--color-text);
     display: block;
     font-family: var(--primary-font);
     font-size: var(--body-text);
@@ -112,7 +112,7 @@ const Button = styled.button`
     text-decoration: none;
 
     &:after {
-        background-color: #fff;
+        background-color: var(--color-text);
         bottom: -4px;
         content: '';
         display: block;

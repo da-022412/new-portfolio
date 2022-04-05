@@ -7,6 +7,7 @@ const Heading = ({ level, ...rest }) => {
 };
 
 const StyledHeading = styled.h1`
+    color: var(--color-text);
     font-family: var(--primary-font);
     font-size: var(--heading-1);
     padding-bottom: ${toRem(28)};

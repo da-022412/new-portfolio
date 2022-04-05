@@ -28,12 +28,13 @@ const App = () => {
             <div
                 style={{
                     backgroundColor: scrollPosition >= 600 ? '#000' : '#fff',
-                    color: scrollPosition >= 600 ? '#fff' : '#000',
                     transition: 'all 0.3s ease',
                 }}
             >
                 <Layout>
-                    <GlobalStyles />
+                    <GlobalStyles
+                        invert={scrollPosition >= 600 ? 'invert' : null}
+                    />
                     <Views />
                 </Layout>
             </div>
@@ -45,7 +46,7 @@ const GlobalStyles = createGlobalStyle`
     :root {
         --body-text: ${toRem(20)};
         --color-accent: #686868;
-        --color-text: #000;
+        --color-text: ${(props) => (props.invert ? '#fff' : '#000')};
         --heading-1: ${toRem(60)};
         --heading-2: ${toRem(48)};
         --heading-3: ${toRem(36)};
