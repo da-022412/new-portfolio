@@ -1,7 +1,7 @@
 import { useForm, ValidationError } from '@formspree/react';
 import styled from 'styled-components';
 
-import { toRem } from '../../utils.js';
+import { toRem, btnStyles } from '../../utils.js';
 
 import BodyText from '../BodyText';
 
@@ -99,38 +99,6 @@ const Input = styled.input(inputStyles);
 
 const Textarea = styled.textarea(inputStyles);
 
-const Button = styled.button`
-    background-color: transparent;
-    border: none;
-    color: var(--color-text);
-    display: block;
-    font-family: var(--primary-font);
-    font-size: var(--body-text);
-    margin: ${toRem(40)} 0;
-    padding: 0;
-    position: relative;
-    text-decoration: none;
-
-    &:after {
-        background-color: var(--color-text);
-        bottom: -8px;
-        content: '';
-        display: block;
-        height: 1px;
-        left: 50%;
-        position: absolute;
-        width: 0;
-        transform: translate(-50%, -50%);
-        transition: all 0.3s ease;
-    }
-
-    &:hover {
-        cursor: pointer;
-    }
-
-    &:hover:after {
-        width: 100%;
-    }
-`;
+const Button = styled.button(btnStyles);
 
 export default Form;
