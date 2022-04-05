@@ -48,6 +48,7 @@ const SkillSlider = ({ items }) => {
 };
 
 const Wrapper = styled.div`
+    color: var(--color-text);
     font-size: ${toRem(60)};
     font-family: var(--primary-font);
     position: relative;

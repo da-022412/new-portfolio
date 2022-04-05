@@ -25,25 +25,19 @@ const App = () => {
 
     return (
         <Router>
-            <div
-                style={{
-                    backgroundColor: scrollPosition >= 600 ? '#000' : '#fff',
-                    transition: 'all 0.3s ease',
-                }}
-            >
-                <Layout>
-                    <GlobalStyles
-                        invert={scrollPosition >= 600 ? 'invert' : null}
-                    />
-                    <Views />
-                </Layout>
-            </div>
+            <Layout>
+                <GlobalStyles
+                    invert={scrollPosition >= 600 ? 'invert' : null}
+                />
+                <Views />
+            </Layout>
         </Router>
     );
 };
 
 const GlobalStyles = createGlobalStyle`
     :root {
+        --background: ${(props) => (props.invert ? '#000' : '#fff')};
         --body-text: ${toRem(20)};
         --color-accent: #686868;
         --color-text: ${(props) => (props.invert ? '#fff' : '#000')};
