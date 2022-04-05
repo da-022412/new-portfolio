@@ -68,9 +68,10 @@ const Form = () => {
 
 const inputStyles = [
     `
+    background-color: transparent;
     border: 0;
     border-bottom: 2px solid #f7f7f7;
-    color: 
+    color: #fff;
     display: block;
     font-family: var(--primary-font);
     font-size: ${toRem(20)};
@@ -101,7 +102,7 @@ const Textarea = styled.textarea(inputStyles);
 const Button = styled.button`
     background-color: transparent;
     border: none;
-    color: var(--color-text);
+    color: #fff;
     display: block;
     font-family: var(--primary-font);
     font-size: var(--body-text);
@@ -111,24 +112,22 @@ const Button = styled.button`
     text-decoration: none;
 
     &:after {
-        background-color: #000;
+        background-color: #fff;
         bottom: -4px;
         content: '';
         display: block;
         height: 2px;
         position: absolute;
-        width: 100%;
-        transition: height 0.3s ease;
-        z-index: -1;
+        width: 0;
+        transition: all 0.3s ease;
     }
 
     &:hover {
-        color: #fff;
         cursor: pointer;
     }
 
     &:hover:after {
-        height: calc(100% + 4px);
+        width: 100%;
     }
 `;
 

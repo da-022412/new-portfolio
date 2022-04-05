@@ -9,8 +9,6 @@
             name="description"
             content="Web site created using create-react-app"
         />
-        <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
         <title>React App</title>
         <style>
             @font-face {
@@ -28,6 +26,52 @@
                 overflow-x: hidden;
                 padding: 0;
                 scroll-behavior: smooth;
+            }
+
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+            }
+
+            * {
+                margin: 0;
+            }
+
+            body {
+                line-height: 1.5;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            img,
+            picture,
+            video,
+            canvas,
+            svg {
+                display: block;
+                max-width: 100%;
+            }
+
+            input,
+            button,
+            textarea,
+            select {
+                font: inherit;
+            }
+
+            p,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                overflow-wrap: break-word;
+            }
+
+            #root,
+            #__next {
+                isolation: isolate;
             }
 
             .swiper-wrapper {

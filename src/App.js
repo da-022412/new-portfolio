@@ -1,13 +1,45 @@
+import { useEffect, useState } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
 
 import { toRem } from './utils.js';
 
-// CSS reset
-import './reset.css';
-
 import Layout from './components/Layout';
 import Views from './Views';
+
+const App = () => {
+    const [scrollPosition, setScrollPosition] = useState(0);
+
+    const handleScroll = () => {
+        const position = window.pageYOffset;
+        setScrollPosition(position);
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    return (
+        <Router>
+            <div
+                style={{
+                    backgroundColor: scrollPosition >= 600 ? '#000' : '#fff',
+                    color: scrollPosition >= 600 ? '#fff' : '#000',
+                    transition: 'all 0.3s ease',
+                }}
+            >
+                <Layout>
+                    <GlobalStyles />
+                    <Views />
+                </Layout>
+            </div>
+        </Router>
+    );
+};
 
 const GlobalStyles = createGlobalStyle`
     :root {
@@ -31,16 +63,5 @@ const GlobalStyles = createGlobalStyle`
         }
     }
 `;
-
-const App = () => {
-    return (
-        <Router>
-            <Layout>
-                <GlobalStyles />
-                <Views />
-            </Layout>
-        </Router>
-    );
-};
 
 export default App;

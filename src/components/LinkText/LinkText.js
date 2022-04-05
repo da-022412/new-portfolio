@@ -16,23 +16,18 @@ const Wrapper = styled.a`
     text-decoration: none;
 
     &:after {
-        background-color: #000;
+        background-color: var(--color-text);
         bottom: -4px;
         content: '';
         display: block;
         height: 2px;
         position: absolute;
-        width: 100%;
-        transition: height 0.3s ease;
-        z-index: -1;
-    }
-
-    &:hover {
-        color: #fff;
+        width: 0;
+        transition: all 0.3s ease;
     }
 
     &:hover:after {
-        height: calc(100% + 4px);
+        width: 100%;
     }
 `;
 
