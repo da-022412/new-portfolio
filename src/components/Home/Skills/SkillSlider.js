@@ -20,7 +20,6 @@ const SkillSlider = ({ items }) => {
                 disableOnInteraction: false,
             }}
             speed={4000}
-            freeModeMomentum={false}
             allowTouchMove={false}
             modules={[Autoplay]}
             breakpoints={{
