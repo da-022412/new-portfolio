@@ -25,7 +25,7 @@ export let btnStyles = [
         bottom: -8px;
         content: '';
         display: block;
-        height: 1px;
+        height: 2px;
         left: 50%;
         position: absolute;
         width: 0;

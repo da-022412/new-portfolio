@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Divider = () => {
-    return <Seperator></Seperator>;
+    return <Seperator />;
 };
 
 const Seperator = styled.div`

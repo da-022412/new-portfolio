@@ -7,34 +7,39 @@ import { PROJECTS_API_URL } from '../../../utils';
 import Container from '../../Container';
 import Heading from '../../Heading';
 import PortfolioItem from './PortfolioItem';
+import Spinning from '../../Spinning';
 
 const Portfolio = () => {
     const [projects, setProjects] = useState();
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         async function getProjects() {
             await axios.get(`${PROJECTS_API_URL}`).then((response) => {
                 setProjects(response.data);
+                setLoading(false);
             });
         }
 
         return getProjects();
     }, []);
 
-    console.log(projects);
-
     return (
         <Container padding={100}>
             <StyledHeading level={3}>My Work</StyledHeading>
-            {projects.map((project, index) => (
-                <PortfolioItem
-                    key={index}
-                    title={project.title.rendered}
-                    excerpt={project.excerpt.rendered}
-                    featuredImg={project.featured_media}
-                    link={project.slug}
-                />
-            ))}
+            {loading ? (
+                <Spinning />
+            ) : (
+                projects.map((project, index) => (
+                    <PortfolioItem
+                        key={index}
+                        title={project.title.rendered}
+                        excerpt={project.excerpt.rendered}
+                        featuredImg={project.featured_media}
+                        link={project.slug}
+                    />
+                ))
+            )}
         </Container>
     );
 };
