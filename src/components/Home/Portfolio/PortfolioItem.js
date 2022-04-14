@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { toRem } from '../../../utils.js';
+import { toEm } from '../../../utils.js';
 
 import FlexContainer from '../../FlexContainer';
 import Heading from '../../Heading';
@@ -50,7 +50,7 @@ const StyledHeading = styled(Heading)`
 `;
 
 const StyledText = styled(BodyText)`
-    padding-bottom: ${toRem(48)};
+    padding-bottom: ${toEm(48)};
 `;
 
 export default PortfolioItem;

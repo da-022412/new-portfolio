@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { toRem } from '../../utils';
+import { toEm } from '../../utils';
 
 import Container from '../Container';
 import Heading from '../Heading';
@@ -18,7 +18,7 @@ const Home = ({ title, subTitle }) => {
 };
 
 const SubHeading = styled(BodyText)`
-    padding-bottom: ${toRem(20)};
+    padding-bottom: ${toEm(20)};
     width: 75%;
 
     @media (max-width: 980px) {

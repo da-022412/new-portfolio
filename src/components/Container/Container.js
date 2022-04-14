@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { toRem } from '../../utils.js';
+import { toEm } from '../../utils.js';
 
 const Container = ({ padding, children, ...rest }) => {
     return (
@@ -14,12 +14,12 @@ const Wrapper = styled.section`
     box-sizing: border-box;
     margin: auto;
     max-width: 90%;
-    padding: ${(props) => (props.padding ? toRem(props.padding) + ' 0' : null)};
+    padding: ${(props) => (props.padding ? toEm(props.padding) + ' 0' : null)};
     width: var(--site-width);
 
     @media (max-width: 980px) {
         padding: ${(props) =>
-            props.padding ? toRem(props.padding / 2) + ' 0' : null};
+            props.padding ? toEm(props.padding / 2) + ' 0' : null};
     }
 `;
 

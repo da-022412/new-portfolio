@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { toRem } from '../../utils.js';
+import { toEm } from '../../utils.js';
 
 import Container from '../Container';
 
@@ -15,7 +15,7 @@ const FlexContainer = ({ padding, children, ...rest }) => {
 const Wrapper = styled(Container)`
     align-items: center;
     display: flex;
-    gap: ${toRem(80)};
+    gap: ${toEm(80)};
     justify-content: space-between;
 
     @media (max-width: 980px) {

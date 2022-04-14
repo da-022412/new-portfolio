@@ -1,5 +1,5 @@
-export function toRem(size, base = 16) {
-    return size / base + 'rem';
+export function toEm(size, base = 16) {
+    return size / base + 'em';
 }
 
 export let PROJECTS_API_URL =
@@ -16,8 +16,8 @@ export let btnStyles = [
     display: inline-block;
     font-family: var(--primary-font);
     font-size: calc(var(--body-text) - 0.25rem);
-    letter-spacing: ${toRem(2)};
-    margin: ${toRem(40)} 0;
+    letter-spacing: ${toEm(2)};
+    margin: ${toEm(40)} 0;
     padding: 0;
     position: relative;
     text-decoration: none;

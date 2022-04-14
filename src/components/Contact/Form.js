@@ -1,7 +1,7 @@
 import { useForm, ValidationError } from '@formspree/react';
 import styled from 'styled-components';
 
-import { toRem, btnStyles } from '../../utils.js';
+import { toEm, btnStyles } from '../../utils.js';
 
 import BodyText from '../BodyText';
 
@@ -74,15 +74,15 @@ const inputStyles = [
     color: #fff;
     display: block;
     font-family: var(--primary-font);
-    font-size: ${toRem(20)};
-    margin-bottom: ${toRem(16)};
+    font-size: ${toEm(20)};
+    margin-bottom: ${toEm(16)};
     outline: none;
-    padding: ${toRem(16)} 0;
+    padding: ${toEm(16)} 0;
     width: 100%;
 
     &::placeholder {
         font-family: var(--primary-font);
-        font-size: ${toRem(20)};
+        font-size: ${toEm(20)};
     }
 `,
 ];

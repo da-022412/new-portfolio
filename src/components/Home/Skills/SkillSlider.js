@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { toRem } from '../../../utils.js';
+import { toEm } from '../../../utils.js';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -48,7 +48,7 @@ const SkillSlider = ({ items }) => {
 
 const Wrapper = styled.div`
     color: var(--color-text);
-    font-size: ${toRem(60)};
+    font-size: ${toEm(60)};
     font-family: var(--primary-font);
     position: relative;
     text-align: center;
@@ -61,7 +61,7 @@ const Wrapper = styled.div`
     }
 
     @media (max-width: 980px) {
-        font-size: ${toRem(24)};
+        font-size: ${toEm(24)};
     }
 `;
 
