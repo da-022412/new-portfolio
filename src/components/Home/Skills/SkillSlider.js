@@ -54,7 +54,7 @@ const Wrapper = styled.div`
     text-align: center;
     white-space: nowrap;
 
-    :after {
+    ::after {
         content: '/';
         left: 100%;
         position: absolute;

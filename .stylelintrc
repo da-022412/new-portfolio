@@ -9,7 +9,8 @@
         "number-leading-zero": null,
         "no-missing-end-of-source-newline": null,
         "string-quotes": "single",
-        "no-empty-first-line": null
-    },
-  "customSyntax": "@stylelint/postcss-css-in-js"
+        "no-empty-first-line": null,
+        "keyframes-name-pattern": null,
+        "declaration-colon-newline-after": null
+    }
 }

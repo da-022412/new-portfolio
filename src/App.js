@@ -45,7 +45,7 @@ const GlobalStyles = createGlobalStyle`
         --heading-2: ${toEm(48)};
         --heading-3: ${toEm(36)};
         --heading-4: ${toEm(28)};
-        --primary-font: gtWalsheimProRegular, sans-serif;
+        --primary-font: gtwalsheimproregular, sans-serif;
         --site-width: 1200px;
     }
 
