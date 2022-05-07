@@ -1,14 +1,15 @@
 import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
 import { PROJECTS_API_URL } from '../../utils';
 
-import Container from '../../components/Container';
 import Spinning from '../../components/Spinning';
 import Hero from '../../components/Hero';
 import ProjectContent from './ProjectContent';
 
-const Project = ({ match }) => {
+const Project = () => {
+    const params = useParams();
     const [meta, setMeta] = useState({
         title: '',
         excerpt: '',
@@ -24,10 +25,10 @@ const Project = ({ match }) => {
 
             Promise.all([projectItem]).then((response) => {
                 response[0].data.forEach((item) => {
-                    if (item.slug === match.params.slug) {
+                    if (item.slug === params.slug) {
                         setMeta({
                             title: item.title.rendered,
-                            excerpt: item.excerpt,
+                            excerpt: item.excerpt.rendered,
                         });
                         setContent(item.content.rendered);
                     }
@@ -38,10 +39,10 @@ const Project = ({ match }) => {
         }
 
         getProjects();
-    }, [match.params.slug]);
+    }, [params.slug]);
 
     return (
-        <Container padding={100}>
+        <>
             {loading ? (
                 <Spinning />
             ) : (
@@ -50,7 +51,7 @@ const Project = ({ match }) => {
                     <ProjectContent content={content} />
                 </>
             )}
-        </Container>
+        </>
     );
 };
 
