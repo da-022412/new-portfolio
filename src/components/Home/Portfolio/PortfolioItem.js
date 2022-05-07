@@ -16,7 +16,7 @@ const PortfolioItem = ({ title, excerpt, featuredImg, link }) => {
                 <Column>
                     <StyledHeading level={3}>{title}</StyledHeading>
                     <StyledText>{excerpt}</StyledText>
-                    <LinkText link={'projects/' + link} target='_blank'>
+                    <LinkText link={'project/' + link} target='_blank'>
                         View Project
                     </LinkText>
                 </Column>
