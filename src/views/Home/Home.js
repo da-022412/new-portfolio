@@ -1,18 +1,42 @@
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+
+import { HOME_API_URL } from '../../utils';
+
+import Spinning from '../../components/Spinning';
 import Hero from '../../components/Hero';
 import Portfolio from '../../components/Home/Portfolio';
 import Clients from '../../components/Home/Clients';
 import Skills from '../../components/Home/Skills';
 import Contact from '../../components/Contact';
 
-let CONTENT = {
-    title: `Hi, I'm Dennis Front-End Developer`,
-    subTitle: `<p>My goal is to create impactful user experiences that connect your customers with your brand. To do this, I combine my background in both design and front-end development to make the creation of your website both a seamless experience for you and an exciting one for your customers.</p><p>In short, your business deserves a great website, and I'm here to make that happen.</p><p>See how I've made it happen for many other brands.</p>`,
-};
-
 const Home = () => {
+    const [content, setContent] = useState();
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        async function getContent() {
+            await axios.get(`${HOME_API_URL}`).then((response) => {
+                setContent(response.data);
+                setLoading(false);
+            });
+        }
+
+        return getContent();
+    }, []);
+
+    console.log(content);
+
     return (
         <>
-            <Hero title={CONTENT.title} subTitle={CONTENT.subTitle} />
+            {loading ? (
+                <Spinning />
+            ) : (
+                <Hero
+                    title={content.title.rendered}
+                    subTitle={content.content.rendered}
+                />
+            )}
             <Portfolio />
             <Clients />
             <Skills />
