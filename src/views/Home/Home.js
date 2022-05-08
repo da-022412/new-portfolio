@@ -33,7 +33,7 @@ const Home = () => {
                 <Spinning />
             ) : (
                 <Hero
-                    title={content.title.rendered}
+                    title={content.acf.title}
                     subTitle={content.content.rendered}
                 />
             )}
