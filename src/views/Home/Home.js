@@ -8,7 +8,6 @@ import Hero from '../../components/Hero';
 import Portfolio from '../../components/Home/Portfolio';
 import Clients from '../../components/Home/Clients';
 import Skills from '../../components/Home/Skills';
-import Contact from '../../components/Contact';
 
 const Home = () => {
     const [content, setContent] = useState();
@@ -37,10 +36,11 @@ const Home = () => {
                     subTitle={content.content.rendered}
                 />
             )}
-            <Portfolio />
+            <div id='work'>
+                <Portfolio />
+            </div>
             <Clients />
             <Skills />
-            <Contact />
         </>
     );
 };

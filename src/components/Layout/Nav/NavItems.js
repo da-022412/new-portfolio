@@ -1,10 +1,12 @@
+import { HashLink as Link } from 'react-router-hash-link';
+
 import LinkText from '../../LinkText';
 
 const NavItems = ({ items }) => {
     return items.map(({ slug, text }, index) => (
-        <LinkText link={slug} key={index}>
-            {text}
-        </LinkText>
+        <Link to={slug} key={index}>
+            <LinkText>{text}</LinkText>
+        </Link>
     ));
 };
 

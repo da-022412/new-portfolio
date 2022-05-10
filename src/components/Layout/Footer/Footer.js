@@ -1,7 +1,9 @@
+import Contact from '../../Contact';
+
 const Footer = () => {
     return (
-        <footer>
-            <></>
+        <footer id='contact'>
+            <Contact />
         </footer>
     );
 };

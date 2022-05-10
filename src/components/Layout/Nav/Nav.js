@@ -7,7 +7,7 @@ const CONTENT = [
     {
         id: 0,
         text: 'My work',
-        slug: '#work',
+        slug: '/#work',
     },
     {
         id: 1,
