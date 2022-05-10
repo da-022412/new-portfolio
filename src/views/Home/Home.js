@@ -24,8 +24,6 @@ const Home = () => {
         return getContent();
     }, []);
 
-    console.log(content);
-
     return (
         <>
             {loading ? (

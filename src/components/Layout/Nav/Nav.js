@@ -5,12 +5,10 @@ import NavItems from './NavItems';
 
 const CONTENT = [
     {
-        id: 0,
         text: 'My work',
         slug: '/#work',
     },
     {
-        id: 1,
         text: 'Get in touch',
         slug: '#contact',
     },
