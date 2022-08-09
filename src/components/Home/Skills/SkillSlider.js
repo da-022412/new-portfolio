@@ -35,8 +35,7 @@ const SkillSlider = ({ items }) => {
                     slidesPerView: 4,
                     spaceBetween: 20,
                 },
-            }}
-        >
+            }}>
             {items.map(({ skill }, index) => (
                 <SwiperSlide key={index}>
                     <Wrapper>{skill}</Wrapper>
@@ -48,7 +47,7 @@ const SkillSlider = ({ items }) => {
 
 const Wrapper = styled.div`
     color: var(--color-text);
-    font-size: ${toEm(60)};
+    font-size: 4vw;
     font-family: var(--primary-font);
     position: relative;
     text-align: center;
