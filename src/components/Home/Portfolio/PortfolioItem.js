@@ -18,7 +18,9 @@ const PortfolioItem = ({ title, excerpt, featuredImg, link }) => {
                     <StyledText>{excerpt}</StyledText>
                     <LinkText link={'project/' + link}>View Project</LinkText>
                 </Column>
-                <FeaturedImg featuredImg={featuredImg} />
+                <Column>
+                    <FeaturedImg featuredImg={featuredImg} />
+                </Column>
             </Wrapper>
             <Divider />
         </>
@@ -35,11 +37,12 @@ const Column = styled.div`
 `;
 
 const Wrapper = styled(FlexContainer)`
-    max-width: none;
+    max-width: 100%;
 
     @media (max-width: 980px) {
-        flex-direction: column;
-        max-width: 90%;
+        flex-direction: column-reverse;
+        gap: 0;
+        padding: 16px 0;
     }
 `;
 
@@ -49,6 +52,10 @@ const StyledHeading = styled(Heading)`
 
 const StyledText = styled(BodyText)`
     padding-bottom: ${toEm(48)};
+
+    @media (max-width: 980px) {
+        padding-bottom: 0;
+    }
 `;
 
 export default PortfolioItem;

@@ -21,8 +21,6 @@ const FeaturedImg = ({ featuredImg }) => {
                     setImg({
                         alt: response.data.alt_text,
                         src: response.data.media_details.sizes.full.source_url,
-                        width: response.data.media_details.sizes.full.width,
-                        height: response.data.media_details.sizes.full.height,
                     });
                 });
         }
@@ -30,14 +28,7 @@ const FeaturedImg = ({ featuredImg }) => {
         getImage();
     }, [featuredImg]);
 
-    return (
-        <Image
-            src={img.src}
-            height={img.height}
-            width={img.width}
-            alt={img.alt}
-        />
-    );
+    return <Image src={img.src} alt={img.alt} />;
 };
 
 export default FeaturedImg;

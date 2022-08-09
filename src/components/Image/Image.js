@@ -1,12 +1,21 @@
 import styled from 'styled-components';
 
-const Image = ({ src, height, width, alt }) => {
+import { toEm } from '../../utils';
+
+const Image = ({ src, alt }) => {
     return (
-        <figure>
-            <StyledImg src={src} height={height} width={width} alt={alt} />
-        </figure>
+        <Wrapper>
+            <StyledImg src={src} alt={alt} />
+        </Wrapper>
     );
 };
+
+const Wrapper = styled.figure`
+    box-sizing: border-box;
+    display: block;
+    padding: ${toEm(16)} 0;
+    width: 100%;
+`;
 
 const StyledImg = styled.img`
     height: auto;
