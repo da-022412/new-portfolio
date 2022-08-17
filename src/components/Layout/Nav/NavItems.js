@@ -12,6 +12,6 @@ const NavItems = ({ items }) => {
     ));
 };
 
-const Wrapper = styled.a(btnStyles);
+const Wrapper = styled.div(btnStyles);
 
 export default NavItems;
