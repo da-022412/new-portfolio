@@ -36,7 +36,7 @@ const Portfolio = () => {
                         title={project.title.rendered}
                         excerpt={project.excerpt.rendered}
                         featuredImg={project.featured_media}
-                        link={project.slug}
+                        link={project.acf.link}
                     />
                 ))
             )}
