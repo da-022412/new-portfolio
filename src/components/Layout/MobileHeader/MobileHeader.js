@@ -21,7 +21,7 @@ const Wrapper = styled.header`
 
 const Logo = styled.div`
     color: #000;
-    font-family: gtWalsheimProRegular, sans-serif;
+    font-family: var(--primary-font);
     font-size: ${toEm(24)};
 
     a {

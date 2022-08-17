@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { toEm } from '../../utils';
+
 const BodyText = ({ children, ...rest }) => {
     return <Wrapper dangerouslySetInnerHTML={{ __html: children }} {...rest} />;
 };
@@ -10,7 +12,7 @@ const Wrapper = styled.div`
     font-size: var(--body-text);
 
     & p {
-        padding-bottom: 32px;
+        padding-bottom: ${toEm(32)};
     }
 `;
 

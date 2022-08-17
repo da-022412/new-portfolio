@@ -44,7 +44,7 @@ const Wrapper = styled(FlexContainer)`
     @media (max-width: 980px) {
         flex-direction: column-reverse;
         gap: 0;
-        padding: 16px 0;
+        padding: ${toEm(16)} 0;
     }
 `;
 

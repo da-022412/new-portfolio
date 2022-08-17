@@ -20,7 +20,7 @@ const Header = () => {
 
 const Logo = styled.div`
     color: #000;
-    font-family: gtWalsheimProRegular, sans-serif;
+    font-family: var(--primary-font);
     font-size: 1.5rem;
 
     a {
