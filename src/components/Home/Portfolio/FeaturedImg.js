@@ -15,7 +15,7 @@ const FeaturedImg = ({ featuredImg }) => {
         async function getImage() {
             await axios
                 .get(
-                    `https://wordpress-741292-2528350.cloudwaysapps.com/wp-json/wp/v2/media/${featuredImg}`
+                    `https://admin.dennisacosta.com/wp-json/wp/v2/media/${featuredImg}`
                 )
                 .then((response) => {
                     setImg({

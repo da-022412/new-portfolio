@@ -3,10 +3,10 @@ export function toEm(size, base = 16) {
 }
 
 export let PROJECTS_API_URL =
-    'https://wordpress-741292-2528350.cloudwaysapps.com/wp-json/wp/v2/portfolio-items/';
+    'https://admin.dennisacosta.com/wp-json/wp/v2/portfolio-items/';
 
 export let HOME_API_URL =
-    'https://wordpress-741292-2528350.cloudwaysapps.com/wp-json/wp/v2/pages/32';
+    'https://admin.dennisacosta.com/wp-json/wp/v2/pages/32';
 
 export let btnStyles = [
     `
