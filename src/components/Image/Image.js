@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 import { toEm } from '../../utils';
 
-const Image = ({ src, alt }) => {
+const Image = ({ src, alt, width, height }) => {
     return (
         <Wrapper>
-            <StyledImg src={src} alt={alt} />
+            <StyledImg src={src} alt={alt} width={width} height={height} />
         </Wrapper>
     );
 };
