@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 import ClientItems from './ClientItems';
 
@@ -68,8 +69,14 @@ const CONTENT = [
 const Clients = () => {
     return (
         <Container padding={100}>
-            <StyledHeading level={2}>Select Clients</StyledHeading>
-            <ClientItems items={CONTENT} />
+            <motion.div
+                initial={{ opacity: 0 }}
+                transition={{ delay: 0.5, default: { duration: 1.5 } }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}>
+                <StyledHeading level={2}>Select Clients</StyledHeading>
+                <ClientItems items={CONTENT} />
+            </motion.div>
         </Container>
     );
 };

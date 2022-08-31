@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 import FlexContainer from '../FlexContainer';
 
@@ -12,10 +13,16 @@ const CONTENT = {
 
 const Contact = () => {
     return (
-        <StyledContainer padding={60}>
-            <ContactInfo content={CONTENT} />
-            <Form />
-        </StyledContainer>
+        <motion.div
+            initial={{ opacity: 0 }}
+            transition={{ delay: 0.5, default: { duration: 1.5 } }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}>
+            <StyledContainer padding={60}>
+                <ContactInfo content={CONTENT} />
+                <Form />
+            </StyledContainer>
+        </motion.div>
     );
 };
 

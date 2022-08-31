@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 import { toEm } from '../../../utils.js';
 
@@ -11,7 +12,11 @@ import Divider from '../../Divider';
 
 const PortfolioItem = ({ title, excerpt, featuredImg, link }) => {
     return (
-        <>
+        <motion.div
+            initial={{ opacity: 0 }}
+            transition={{ delay: 0.5, default: { duration: 1.5 } }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}>
             <Wrapper padding={40}>
                 <Column>
                     <StyledHeading level={3}>{title}</StyledHeading>
@@ -25,7 +30,7 @@ const PortfolioItem = ({ title, excerpt, featuredImg, link }) => {
                 </Column>
             </Wrapper>
             <Divider />
-        </>
+        </motion.div>
     );
 };
 
