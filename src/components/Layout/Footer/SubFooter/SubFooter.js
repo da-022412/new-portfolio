@@ -7,7 +7,6 @@ import BodyText from '../../../BodyText';
 
 import gitHub from '../../../../assets/images/github-icon-white.svg';
 import linkedIn from '../../../../assets/images/linkedin-icon-white.svg';
-import dribbble from '../../../../assets/images/dribbble-icon-white.svg';
 
 const CONTENT = [
     {
