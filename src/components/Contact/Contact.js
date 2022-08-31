@@ -15,7 +15,7 @@ const Contact = () => {
     return (
         <motion.div
             initial={{ opacity: 0 }}
-            transition={{ delay: 0.5, default: { duration: 1.5 } }}
+            transition={{ delay: 0.125, default: { duration: 1.5 } }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}>
             <StyledContainer padding={60}>

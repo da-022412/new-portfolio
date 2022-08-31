@@ -71,7 +71,7 @@ const Clients = () => {
         <Container padding={100}>
             <motion.div
                 initial={{ opacity: 0 }}
-                transition={{ delay: 0.5, default: { duration: 1.5 } }}
+                transition={{ delay: 0.125, default: { duration: 1.5 } }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}>
                 <StyledHeading level={2}>Select Clients</StyledHeading>
