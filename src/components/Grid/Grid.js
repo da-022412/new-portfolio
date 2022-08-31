@@ -16,6 +16,7 @@ const Wrapper = styled.div`
     );
 
     @media (max-width: 980px) {
+        gap: ${toEm(32)};
         grid-template-columns: repeat(
             auto-fit,
             minmax(${(props) => props.width / 2 + 'px'}, 1fr)
